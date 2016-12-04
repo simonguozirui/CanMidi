@@ -1,4 +1,3 @@
-
 #include <Servo.h>
 Servo cservo, dservo, eservo, fservo, gservo, aservo, bservo, Cservo;
 int pos = 0;   
@@ -12,17 +11,13 @@ const int servo_g = 10;
 const int servo_a = 11;
 const int servo_b = 12;
 const int servo_C = 13;
-
 const int midilength = 32;
-
 String data;
 String playservos[32];
-
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   delay(2000);
-
   int i = 0;
   boolean startReading = false;
   while (i<midilength) {
@@ -47,7 +42,6 @@ void setup() {
        }
     }
   }
-  while(1);
   
   pinMode(servo_c, OUTPUT);
   pinMode(servo_d, OUTPUT);
@@ -77,9 +71,7 @@ void setup() {
   Cservo.write(25);
   
   
-
 }
-
 int servo2output(int servoid) {
   int output = 0;
   if (servoid == 0)
@@ -101,7 +93,6 @@ int servo2output(int servoid) {
   
   return output;
 }
-
 //void servo_swing(int servo_num){
 //   current_servo.attach(servo_num); 
 //   int adjustment = 0;
@@ -120,7 +111,6 @@ int servo2output(int servoid) {
 //     delay(10);
 //   }
 //}
-
 void servo_swingAll(int servo1, int servo2, int servo3, int servo4, int servo5, int servo6, int servo7, int servo8) {
   swinging = true;
   Serial.println("Start Swinging");
@@ -144,7 +134,7 @@ void servo_swingAll(int servo1, int servo2, int servo3, int servo4, int servo5, 
     if (servo7 == 1)
       bservo.write(pos+130);
     if (servo8 == 1)
-      Cservo.write(pos+25);
+      Cservo.write(pos+30);
     delay(10);
     delayCount += 10;
     
@@ -167,7 +157,7 @@ void servo_swingAll(int servo1, int servo2, int servo3, int servo4, int servo5, 
     if (servo7 == 1)
       bservo.write(pos+130);
     if (servo8 == 1)
-      Cservo.write(pos+25);
+      Cservo.write(pos+30);
     delay(10);
     delayCount += 10;
     
@@ -180,7 +170,6 @@ void servo_swingAll(int servo1, int servo2, int servo3, int servo4, int servo5, 
   Serial.println("Done Swinging");
   
 }
-
 void loop() {
   for (int i = 0; i<midilength; i++) {
     String stepString = playservos[i];
@@ -199,4 +188,3 @@ void loop() {
   
   while (1);
 }
-
