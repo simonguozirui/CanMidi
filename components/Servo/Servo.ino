@@ -79,5 +79,38 @@
      delay(500);
      servo_swing(servo_C);
      delay(500);
+     
+     servo_swing(servo_c);
+     delay(50);
+     servo_swing(servo_d);
+     delay(50);
+     servo_swing(servo_e);
+     delay(50);
+     servo_swing(servo_f);
+     delay(50);
+     servo_swing(servo_g);
+     delay(50);
+     servo_swing(servo_a);
+     delay(50);
+     servo_swing(servo_b);
+     delay(50);
+     servo_swing(servo_C);
+     delay(50);
+      servo_swing(servo_b);
+     delay(50);
+     servo_swing(servo_a);
+     delay(50);
+     servo_swing(servo_g);
+     delay(50);
+     servo_swing(servo_f);
+     delay(50);
+     servo_swing(servo_e);
+     delay(50);
+     servo_swing(servo_d);
+     delay(50);
+     servo_swing(servo_c);
+     delay(50);
+     
   }
+  
 
