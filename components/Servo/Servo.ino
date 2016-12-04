@@ -34,7 +34,7 @@
         adjustment = 18;
     }
     if (servo_num == 8){
-        adjustment = 150;
+        adjustment = 160;
     }
     if (servo_num == 10){
         adjustment = 20;
@@ -46,7 +46,7 @@
         adjustment = 130;
     }
     if (servo_num == 13){
-        adjustment = 50;
+        adjustment = 25;
     }
     for(pos = 0+adjustment; pos < 25+adjustment; pos += speed)  
      {  
@@ -73,11 +73,11 @@
      delay(500);
      servo_swing(servo_g);
      delay(500);
-//     servo_swing(servo_a);
-//     delay(500);
-//     servo_swing(servo_b);
-//     delay(500);
-//     servo_swing(servo_C);
-//     delay(500);
+     servo_swing(servo_a);
+     delay(500);
+     servo_swing(servo_b);
+     delay(500);
+     servo_swing(servo_C);
+     delay(500);
   }
 
